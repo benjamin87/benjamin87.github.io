@@ -1,0 +1,28 @@
+---
+# This is the Front Matter block
+---
+body {
+  font: 400 16px/1.5 Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+blockquote p {
+  font-size: 16px;
+}
+
+li > ul {
+  margin-bottom: 15px;
+}
+
+/*
+* 居中图片使用格式 ![image-title](/path/to/images){: .center-image }
+*/
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
