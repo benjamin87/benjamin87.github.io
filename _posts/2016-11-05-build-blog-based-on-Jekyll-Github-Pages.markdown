@@ -158,8 +158,10 @@ categories: jekyll
 
 ----
 
-**参考文献**
+* **参考文献**
+
   * [how-to-install-jekyll-and-pages-gem-on-windows-10-x46][how-to-install-jekyll-and-pages-gem-on-windows-10-x46]
+
   * [setting-up-your-github-pages-site-locally-with-jekyll][setting-up-your-github-pages-site-locally-with-jekyll]
 
 
