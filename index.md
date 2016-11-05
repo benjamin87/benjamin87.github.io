@@ -5,5 +5,5 @@
 layout: home
 ---
 <head>
-  <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.github.url }}/public/css/styles.css">
 </head>
