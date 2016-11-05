@@ -4,3 +4,6 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+<head>
+  <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+</head>
