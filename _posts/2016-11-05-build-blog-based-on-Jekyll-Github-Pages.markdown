@@ -3,11 +3,11 @@ layout: post
 title:  "搭建Jekyll+Github Pages(Windows版)"
 date:   2016-11-05 10:58:19 +0800
 categories: jekyll
+author: "Benjamin"
+tags:
+    - Jekyll
+    - Github
 ---
-
-<head>
-  <link rel="stylesheet" type="text/css" href="{{ site.github.url }}/public/css/styles.css">
-</head>
 
 偶尔间提笔，记录下工作中的所见所想。书写博客，是一种形式，更是一种经验的积累。
 
@@ -143,7 +143,7 @@ categories: jekyll
 
        ![github-login]({{ site.github.url }}/img/20161105/01.jpg){: .center-image }
 
-    2. 创建一个托管仓库，此处名称并没有任何关系，不会显示在其他地方
+    2. 创建一个托管仓库，此处名称会显示在博客URL中
 
        ![github-repos]({{ site.github.url }}/img/20161105/06.jpg){: .center-image }
 
