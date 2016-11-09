@@ -37,7 +37,7 @@ tags:
 
      出现如下提示，`Chocolatey`安装成功
 
-     ![choco-install-success]({{ site.github.url }}/img/20161105/02.jpg){: .center-image }
+     ![choco-install-success]({{ site.baseurl }}/img/20161105/02.jpg){: .center-image }
 
   2. 安装[ruby][ruby-cn]
 
@@ -63,7 +63,7 @@ tags:
 
      会报错如下：`certificate verify failed`
 
-     ![gem-ssl-error]({{ site.github.url }}/img/20161105/04.jpg){: .center-image }
+     ![gem-ssl-error]({{ site.baseurl }}/img/20161105/04.jpg){: .center-image }
 
      解决办法：**在Gem sources中指定非HTTPS的站点来进行安装**
 
@@ -79,7 +79,7 @@ tags:
      sudo gem sources -a http://rubygems.org/
      ```
 
-     ![gem-sources]({{ site.github.url }}/img/20161105/05.jpg){: .center-image }
+     ![gem-sources]({{ site.baseurl }}/img/20161105/05.jpg){: .center-image }
 
      然后再执行jekyll的安装命令就没问题啦！
 
@@ -141,17 +141,17 @@ tags:
 
     1. 博客中的所有文件都会被托管在Github上，毋容置疑，我们首先就需要一个Github账号，直接去[Github][github]上申请就可以了。
 
-       ![github-login]({{ site.github.url }}/img/20161105/01.jpg){: .center-image }
+       ![github-login]({{ site.baseurl }}/img/20161105/01.jpg){: .center-image }
 
     2. 创建一个托管仓库，此处名称会显示在博客URL中
 
-       ![github-repos]({{ site.github.url }}/img/20161105/06.jpg){: .center-image }
+       ![github-repos]({{ site.baseurl }}/img/20161105/06.jpg){: .center-image }
 
     3. 将前述所创建的Jekyll站点提交入该仓库
 
     4. 在该仓库的设置项中，设置Github-pages开启的分支，图中选择了main分支，点击默认给出的链接就可以访问到Jekyll的博客站点啦！
 
-       ![github-pages-branch]({{ site.github.url }}/img/20161105/07.jpg){: .center-image }
+       ![github-pages-branch]({{ site.baseurl }}/img/20161105/07.jpg){: .center-image }
 
 
 至此，整个创建流程就完工啦！只需要本地写完博文，提交github发布即可，赶紧去看看吧！
