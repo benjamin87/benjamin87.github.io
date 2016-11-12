@@ -2,7 +2,7 @@
 layout: post
 title:  "搭建Jekyll+Github Pages(Windows版)"
 date:   2016-11-05 10:58:19 +0800
-categories: jekyll
+categories: tech
 author: "Benjamin"
 tags:
     - Jekyll
