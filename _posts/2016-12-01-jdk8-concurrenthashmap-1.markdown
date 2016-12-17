@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ConcurrentHashMap 源码解读-jdk8"
+title:  "ConcurrentHashMap源码解读(put/transfer/get)-jdk8"
 date:   2016-12-01 22:25:49 +0800
 categories: tech
 author: "Benjamin"
