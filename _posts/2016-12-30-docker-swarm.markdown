@@ -9,13 +9,13 @@ tags:
     - 集群
 ---
 
-[Docker][docker] v1.12 版本将原有的swarm功能并入了 **docker engine**，即[swarm mode][swarm]，这大大简化了搭建与调度docker集群流程。本文遵循官方文档，搭建并实践swarm使用场景。
+[Docker][docker] v1.12 版本将原有的swarm功能并入了 **docker engine**，即 **[swarm mode][swarm]**，这大大简化了搭建与调度docker集群流程。本文遵循官方文档，搭建并实践swarm使用场景。
 
 ---
 
 #### Swarm概念
 
-Swarm是一组安装docker的机器集群，每一台安装docker的机器（既可以是物理机，也可以是虚拟机）被称为一个[node][swarm node]。Node一般分为两种：manager node和worker nodes。顾名思义，前者在swarm集群中扮演着leader的角色。通常用户提交的[services][services]执行请求会送达manager node，再通过manager node将请求封装为[tasks][tasks]分配给worker nodes。
+Swarm是一组安装docker的机器集群，每一台安装docker的机器（既可以是物理机，也可以是虚拟机）被称为一个[node][swarm node]。Node一般分为两种：**manager node** 和 **worker nodes**。顾名思义，前者在swarm集群中扮演着leader的角色。通常用户提交的[services][services]执行请求会送达manager node，再通过manager node将请求封装为[tasks][tasks]分配给worker nodes。
 
 ---
 
@@ -100,7 +100,7 @@ ID                         NAME          IMAGE   NODE     DESIRED STATE  CURRENT
 
 $ docker ps
 CONTAINER ID  IMAGE          COMMAND            CREATED         STATUS        PORTS  NAMES
-e319ea3fa588  alpine:latest  "ping docker.com"  1 minutes ago   Up 10 minutes        helloworld.1.0xb2gnjb571w0lhjmjspx71or
+e319ea3fa588  alpine:latest  "ping docker.com"  1 minutes ago   Up 1 minutes        helloworld.1.0xb2gnjb571w0lhjmjspx71or
 ```
 
 通过docker service create命令，我们在该swarm集群中创建了一个名为helloworld的service。通过docker service ls命令，我们确认了该service已经在正常运行了。其中replicas表示该服务有几个实例正在运行。swarm中service分两种：
