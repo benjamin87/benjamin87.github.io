@@ -50,11 +50,12 @@ Email Address []:
 >如果证书的来源是正规CA机构，可以直接跳过该章节。
 
 由于我们使用了自签名证书，需要将crt文件加入系统的CA bundle文件当中，使操作系统信任我们的自签名证书。笔者使用的系统有两种：CentOS和macOS。
-- CentOS:
+
+- CentOS: 执行命令
 ```shell
 cat domain.crt >> /etc/pki/tls/certs/ca-bundle.crt
 ```
-- macOS
+- macOS:
 直接双击crt文件，导入mac的钥匙串访问即可
 
 ---
@@ -120,13 +121,13 @@ Status: Downloaded newer image for test.thosecoolguys.com:5000/registry:latest
 
 #### 总结
 
-Docker官方提供的registry:2的镜像，可以很快捷地实现一个本地私有的registry仓库。本文利用自签名的证书，搭建了一个私有registry，简单实现了push/pull的功能。围绕这些功能，我们可以实现更多更复杂的测试开发、运维等需求。再也不用为网速而烦恼了；同样，也不用担心数据放置在公共网络中的安全性问题。
+Docker官方提供的registry:2的镜像，可以很快捷地实现一个本地私有的registry仓库。本文利用自签名的证书，搭建了一个私有registry，简单实现了push/pull的功能。围绕这些功能，我们可以实现更多更复杂的测试开发、运维等需求。再也不用为网速而烦恼了同样，也不用担心数据放置在公共网络中的安全性问题。
 
 ---
 
 #### 参考文献
 
-  - [实战 | 如何搭建安全可靠的Docker Registry?][dockerone_reference]
+  - [实战 如何搭建安全可靠的Docker Registry?][dockerone_reference]
   - [Deploying a registry server][deploying_registry]
 
 [docker registry]:https://docs.docker.com/registry/
