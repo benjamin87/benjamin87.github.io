@@ -52,9 +52,7 @@ Email Address []:
 由于我们使用了自签名证书，需要将crt文件加入系统的CA bundle文件当中，使操作系统信任我们的自签名证书。笔者使用的系统有两种：CentOS和macOS。
 
 - CentOS: 执行命令
-```shell
 cat domain.crt >> /etc/pki/tls/certs/ca-bundle.crt
-```
 - macOS:
 直接双击crt文件，导入mac的钥匙串访问即可
 
