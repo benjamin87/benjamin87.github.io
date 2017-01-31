@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "poj 2524 Ubiquitous Religions"
+date:   2017-01-31 10:17:18 +0800
+categories: oj
+author: "Benjamin"
+tags:
+    - poj
+    - 解题报告
+---
+
+#### [原题][2524]
+
+> There are so many different religions in the world today that it is difficult to keep track of them all. You are interested in finding out how many different religions students in your university believe in.
+
+> You know that there are n students in your university (0 < n <= 50000). It is infeasible for you to ask every student their religious beliefs. Furthermore, many students are not comfortable expressing their beliefs. One way to avoid these problems is to ask m (0 <= m <= n(n-1)/2) pairs of students and ask them whether they believe in the same religion (e.g. they may know if they both attend the same church). From this data, you may not know what each person believes in, but you can get an idea of the upper bound of how many different religions can be possibly represented on campus. You may assume that each student subscribes to at most one religion.
+
+---
+
+- 解题模型：并查集
+- 解题思路：将每个学生看成节点，遍历给出的所有条件，将属于同一宗教的学生节点合并成集，最后统计集合的数量
+- 注意点：根据题目提示，由于输入量较大，使用 **scanf** 读取。经比较，**使用cin使用时间>1600ms，scanf则<300ms！**
+
+---
+
+#### [源码][cpp]
+
+```cpp
+#include<cstdio>
+
+using namespace std;
+
+int stu[50000 + 10];
+
+void init_set(int n) {
+    for(int i = 1; i <= n; i++) {
+        stu[i] = i;
+    }
+}
+
+int find(int x) {
+    return stu[x] == x ? x : stu[x] = find(stu[x]);
+}
+
+void union_set(int x, int y) {
+    int root1 = find(x);
+    int root2 = find(y);
+
+    if(root1 != root2) {
+        stu[root1] = root2;
+    }
+}
+
+int main() {
+    int n,m;
+    int count = 0;
+    while(scanf("%d%d", &n, &m) != EOF) {
+
+        if(n == 0 && m == 0) break;
+
+        init_set(n);
+
+        int r1,r2;
+        while(m--) {
+            scanf("%d%d", &r1, &r2);
+            union_set(r1, r2);
+        }
+
+        int ans = 0;
+        for(int i = 1; i <= n; i++) {
+            if(stu[i] == i) ++ans;
+        }
+
+        printf("Case %d: %d\n", ++count, ans);
+    }
+    return 0;
+}
+```
+
+[2524]: http://poj.org/problem?id=2524
+[cpp]: https://github.com/benjamin87/poj/blob/master/2524/main.cpp
